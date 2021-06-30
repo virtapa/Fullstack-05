@@ -6,6 +6,7 @@
 .pnp.js
 .env
 .rest
+/cypress/videos
 
 # testing
 /coverage

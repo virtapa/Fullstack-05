@@ -14,7 +14,6 @@ const App = () => {
   const [password, setPassword] = useState('')
   const [user, setUser] = useState(null)
   const [message, setMessage] = useState(null)
-  //const [update, setUpdate] = useState(null)
   const blogFromRef = useRef()
 
   useEffect(() => {
@@ -86,7 +85,6 @@ const App = () => {
       id: id,
       likes: likes + 1,
     })
-    //setUpdate(Math.floor(Math.random() * 10))
   }
 
   const handleRemove = async (blog) => {
@@ -100,7 +98,6 @@ const App = () => {
         text: 'blog removed',
         type: 'success',
       })
-      //setUpdate(Math.floor(Math.random() * 10))
     }
   }
 
@@ -124,7 +121,7 @@ const App = () => {
 
   const blogForm = () => (
     <Togglable buttonLabel="Add Blog" ref={blogFromRef}>
-      <BlogForm createBlog={addBlog}></BlogForm>
+      <BlogForm addBlog={addBlog}></BlogForm>
     </Togglable>
   )
 
